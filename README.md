@@ -47,7 +47,7 @@ To get a local copy up and running follow these setup steps.
 
 Contributions, issues, and feature requests are welcome!
 
-## Cedits
+## Credits
 
 - Design inspiration: [Zeplin project](https://app.zeplin.io/project/5b35a9e13227086040f8eb75/screen/5b695e29bb8c844f118f9378)
 
