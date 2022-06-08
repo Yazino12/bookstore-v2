@@ -89,7 +89,12 @@ nav .left ul {
   flex: 2;
 }
 
-.checkStatus {
-  width: 200px;
+.categories {
+  text-align: center;
+  width: 90%;
   margin: auto;
+}
+
+.categories .checkStatus {
+  width: 200px;
 }
