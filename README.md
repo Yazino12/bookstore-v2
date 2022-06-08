@@ -33,9 +33,9 @@ To get a local copy up and running follow these setup steps.
 - Launch the test runner : `npm test`
 - In case you run into any errors please raise an [issue](https://github.com/Yazino12/bookstore-v2/issues).
 
-**Usage**
+**Live**
 
-- You may use this project as you like.
+- Live app: [BookStore](https://bookstore-v2.netlify.app/)
 
 ## Authors
 
