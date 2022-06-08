@@ -11,13 +11,6 @@ import Сategories from '../pages/Categories';
 const BookStore = () => {
   const books = useSelector((state) => state.books);
   const dispatch = useDispatch();
-  // const [books, setBooks] = useState([
-  //   {
-  //     id: uuidv4(),
-  //     title: 'Harry Potter',
-  //     author: 'J. K. Rowling',
-  //   },
-  // ]);
 
   const addBook = (title, author) => {
     const newBook = {
@@ -25,12 +18,11 @@ const BookStore = () => {
       title,
       author,
     };
-    // setBooks([...books, newBook]);
+
     dispatch(add(newBook));
   };
 
   const removeBook = (bookID) => {
-    // setBooks(books.filter((book) => book.id !== bookID));
     dispatch(remove(bookID));
   };
 
