@@ -1,29 +1,25 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { addBook } from '../redux/books/books';
 
-const AddBook = (props) => {
-  const [inputText, setInputText] = useState({
-    title: '',
-    author: '',
-  });
-
-  const { addBookProps } = props;
-
-  const onChange = (e) => {
-    setInputText({
-      ...inputText,
-      [e.target.name]: e.target.value,
-    });
-  };
+const AddBook = () => {
+  const dispatch = useDispatch();
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (inputText.title.trim() && inputText.author.trim()) {
-      addBookProps(inputText.title, inputText.author);
-      setInputText({
-        title: '',
-        author: '',
-      });
+    if (title.trim() && author.trim()) {
+      const newBook = {
+        id: uuidv4(),
+        title,
+        author,
+        category: 'Action',
+      };
+      dispatch(addBook(newBook));
+      setTitle('');
+      setAuthor('');
     } else {
       alert('Please enter a valid text');
     }
@@ -37,17 +33,17 @@ const AddBook = (props) => {
           type="text"
           className="titleInput"
           placeholder="Book title"
-          value={inputText.title}
+          value={title}
           name="title"
-          onChange={onChange}
+          onChange={(e) => setTitle(e.target.value)}
         />
         <input
           type="text"
           className="authorInput"
           placeholder="Author"
-          value={inputText.author}
+          value={author}
           name="author"
-          onChange={onChange}
+          onChange={(e) => setAuthor(e.target.value)}
         />
         <button className="input-submit" type="submit">
           ADD BOOK
@@ -55,10 +51,6 @@ const AddBook = (props) => {
       </div>
     </form>
   );
-};
-
-AddBook.propTypes = {
-  addBookProps: PropTypes.func.isRequired,
 };
 
 export default AddBook;

@@ -5,7 +5,6 @@ import RemoveBook from './RemoveBook';
 function Book(props) {
   const {
     book: { title, author, id },
-    removeBook,
   } = props;
   return (
     <div className="book">
@@ -13,7 +12,7 @@ function Book(props) {
       <p className="bookAuthor">{author}</p>
       <div className="interactions">
         <button type="submit">Comments</button>
-        <RemoveBook bookID={id} removeBook={removeBook} />
+        <RemoveBook bookID={id} />
         <button type="submit">Edit</button>
       </div>
     </div>
@@ -22,7 +21,6 @@ function Book(props) {
 
 Book.propTypes = {
   book: PropTypes.objectOf(PropTypes.string).isRequired,
-  removeBook: PropTypes.func.isRequired,
 };
 
 export default Book;
