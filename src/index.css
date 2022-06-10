@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
   --bubble-gum-pink: #ff5ab7;
   --black: #000;
@@ -11,9 +14,18 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif, 'Segoe UI', 'Roboto', 'Oxygen';
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   background-color: #fafafa;
+  min-width: 855px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: auto;
 }
 
 ul {
@@ -22,6 +34,10 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .main {
@@ -35,7 +51,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2em;
+  padding: 1em 6em;
   border: solid 1px var(--grey-border);
   background-color: #fff;
 }
@@ -46,9 +62,42 @@ nav .left {
   gap: 2em;
 }
 
+nav .left h1 {
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+}
+
 nav .left ul {
   display: flex;
   gap: 1em;
+}
+
+nav .left ul li {
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.main .bookStore {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.main .bookStore hr {
+  background-color: #e8e8e8;
+  border: none;
+  width: 82%;
+  height: 0.125rem;
 }
 
 .bookList {
@@ -63,17 +112,154 @@ nav .left ul {
   align-items: center;
   width: 80%;
   margin: auto;
-  padding: 0 1em;
+  padding: 1em;
   background-color: #fff;
   border: solid 1px var(--grey-border);
+}
+
+.book .left {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  flex: 2;
+}
+
+.book .left .heading p {
+  font-size: 0.8rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  margin-top: 0.4em;
+}
+
+.book .left .interactions {
+  display: flex;
+  gap: 1em;
+}
+
+.v-line-small {
+  border-left: solid 1px #e8e8e8;
+  width: 0.125em;
+  height: 1.5em;
+}
+
+.v-line-big {
+  border-left: solid 1px #e8e8e8;
+  width: 0.125rem;
+  height: 4.375rem;
+}
+
+.book .left .interactions button {
+  font-size: 0.8rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #4386bf;
+}
+
+.book .middle {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  flex: 1;
+}
+
+.book .middle .progress {
+  width: 50px;
+  height: 50px;
+}
+
+.book .middle .percentage {
+  display: flex;
+  flex-direction: column;
+}
+
+.book .middle .percentage h4 {
+  font-size: 1.8rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.book .middle .percentage span {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.book .right {
+  font-family: 'RobotoSlab', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  flex: 1;
+}
+
+.book .right .upper span {
+  font-size: 0.8rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.book .right .upper p {
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.book .right .update-progress {
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  width: 15.5em;
+  height: 2.063em;
+  background-color: #0290ff;
+  border: none;
+  padding: 0.438rem 1.188rem;
+  border-radius: 3px;
+  color: #fff;
 }
 
 .form-container {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  gap: 1em;
+  width: 82%;
   margin: auto;
-  padding: 0 1.1em;
+}
+
+.form-container .formHeading {
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+  margin-left: 0;
 }
 
 .form-container .inputs {
@@ -81,12 +267,37 @@ nav .left ul {
   gap: 2em;
 }
 
+.form-container .inputs input {
+  padding: 0.813rem 3.688rem 0.813rem 1.063rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
 .form-container .inputs .titleInput {
-  flex: 3;
+  flex: 4;
 }
 
 .form-container .inputs .authorInput {
   flex: 2;
+}
+
+.form-container .inputs .input-submit {
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  width: 11.5rem;
+  height: 2.813rem;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  color: #fff;
+  border: none;
 }
 
 .categories {
