@@ -1,11 +1,14 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { removeBook } from '../redux/books/books';
 
 const RemoveBook = (props) => {
-  const { bookID, removeBook } = props;
+  const dispatch = useDispatch();
+  const { bookID } = props;
 
   const onClick = () => {
-    removeBook(bookID);
+    dispatch(removeBook(bookID));
   };
 
   return (
@@ -17,7 +20,6 @@ const RemoveBook = (props) => {
 
 RemoveBook.propTypes = {
   bookID: PropTypes.string.isRequired,
-  removeBook: PropTypes.func.isRequired,
 };
 
 export default RemoveBook;
