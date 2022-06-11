@@ -8,7 +8,7 @@
   Demo 📝
 </h2>
 
-<img src="https://github.com/Yazino12/bookstore-v2/blob/dev/src/assets/demo.png?raw=true" width="2470" height="1160">
+<img src="https://github.com/Yazino12/bookstore-v2/blob/dev/src/assets/demo.png?raw=true" width="2470" height="600">
 
 ## Built With
 
