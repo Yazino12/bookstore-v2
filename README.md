@@ -26,7 +26,7 @@ To get a local copy up and running follow these setup steps.
 **Setup**
 
 - Open terminal and clone the project: `git clone https://github.com/Yazino12/bookstore-v2.git`
-- cd into the directory `bookstore`
+- cd into the directory `bookstore-v2`
 
 **Prerequisites**
 
