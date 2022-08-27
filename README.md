@@ -43,11 +43,13 @@ To get a local copy up and running follow these setup steps.
 
 - Live app: [BookStore](https://bookstore-v2.netlify.app/)
 
-## Authors
+## Author
 
-👤 **Yasin**
+👤 **Yasin Warsame**
 
 - GitHub: [@Yazino12](https://github.com/Yazino12)
+- Twitter: [@yasino24](https://twitter.com/yasino24)
+- LinkedIn: [yasin-warsame](https://linkedin.com/in/yasin-warsame-a4176217a)
 
 ## 🤝 Contributing
 
@@ -63,7 +65,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-This was not possible without the help of [Microverse](https://github.com/microverseinc/curriculum-transversal-skills/blob/main/documentation/hello_microverse_project.md).
+- This was not possible without the help of [Microverse](https://github.com/microverseinc/curriculum-transversal-skills/blob/main/documentation/hello_microverse_project.md).
 
 ## 📝 License
 
