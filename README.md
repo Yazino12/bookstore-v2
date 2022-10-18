@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/-Yazino12-yellow
+![](https://img.shields.io/badge/-Yazino12-yellow)
 
 # Bookstore
 
