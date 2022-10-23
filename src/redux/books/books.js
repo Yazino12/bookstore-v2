@@ -25,7 +25,7 @@ export const getAll = (payload) => ({
 export const getBooks = () => async (dispatch) => {
   const books = await Axios.get(endPoint);
   const mapBooks = Object.entries(books.data).map(([_data, booksArray]) => {
-    // const { id, author, title } = book;
+    console.log(_data);
     return booksArray;
   });
   dispatch(getAll(mapBooks));

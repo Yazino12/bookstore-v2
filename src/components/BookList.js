@@ -6,6 +6,7 @@ function BookList(props) {
   let { books } = props;
   books.map((book) => {
     books = book;
+    return book;
   });
   return (
     <div className="bookList">

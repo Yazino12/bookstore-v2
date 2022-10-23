@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 const RemoveBook = (props) => {
   // const dispatch = useDispatch();
   const { bookID } = props;
+  console.log(bookID);
 
   const onClick = () => {
     // dispatch(removeBook(bookID));
