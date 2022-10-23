@@ -21,13 +21,13 @@ const BookStore = () => {
       <Routes>
         <Route
           path="/"
-          element={(
+          element={
             <div className="bookStore">
               <BookList books={books} />
               <hr />
               <AddBook />
             </div>
-          )}
+          }
         />
         <Route path="categories" element={<Сategories />} />
       </Routes>
