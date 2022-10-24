@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import { NavLink } from 'react-router-dom';
 import 'react-circular-progressbar/dist/styles.css';
 import RemoveBook from './RemoveBook';
 import '../index.css';
 
 function Book(props) {
-  const {
-    book: { title, author, id },
-  } = props;
+  const { book } = props;
+  const { title, author, id } = book;
 
   const percentage = 66;
 
@@ -16,7 +16,15 @@ function Book(props) {
     <div className="book">
       <div className="left">
         <div className="heading">
-          <h3 className="bookTitle">{title}</h3>
+          <NavLink
+            to="/show-book"
+            key={id}
+            state={book}
+            className="bookTitle"
+            exact="true"
+          >
+            {title}
+          </NavLink>
           <p className="bookAuthor">{author}</p>
         </div>
         <div className="interactions">
