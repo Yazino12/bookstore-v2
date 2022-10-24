@@ -1,7 +1,7 @@
 import Axios from 'axios';
 
-// const ADDBOOK = 'ADDBOOK';
-// const REMOVEBOOK = 'REMOVEBOOK';
+const ADDBOOK = 'ADDBOOK';
+const REMOVEBOOK = 'REMOVEBOOK';
 const GETBOOKS = 'GETBOOKS';
 
 const URL = 'http://localhost:3001/api/v1';
@@ -12,10 +12,10 @@ const endPoint = `${URL}/books/`;
 //   payload,
 // });
 
-// export const remove = (payload) => ({
-//   type: REMOVEBOOK,
-//   payload,
-// });
+export const remove = (payload) => ({
+  type: REMOVEBOOK,
+  payload,
+});
 
 export const getAll = (payload) => ({
   type: GETBOOKS,
@@ -45,19 +45,19 @@ export const getBooks = () => async (dispatch) => {
 //   dispatch(add(payload));
 // };
 
-// export const removeBook = (bookID) => async (dispatch) => {
-//   await Axios.delete(`${endPoint}${bookID}`);
-//   dispatch(remove(bookID));
-// };
+export const removeBook = (bookID) => async (dispatch) => {
+  await Axios.delete(`${endPoint}${bookID}`);
+  dispatch(remove(bookID));
+};
 
 const booksReducer = (state = [], action) => {
   switch (action.type) {
     case GETBOOKS:
       return action.payload;
-    // case ADDBOOK:
-    //   return [...state, action.payload];
-    // case REMOVEBOOK:
-    //   return state.filter((book) => book.id !== action.payload);
+    case ADDBOOK:
+      return [...state, action.payload];
+    case REMOVEBOOK:
+      return state.filter((book) => book.id !== action.payload);
     default:
       return state;
   }
