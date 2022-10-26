@@ -125,7 +125,13 @@ nav .left ul li {
   flex: 2;
 }
 
-.book .left .heading p {
+.book .left .heading .bookTitle {
+  font-size: 1.17em;
+  font-weight: bold;
+  color: black;
+}
+
+.book .left .heading .bookAuthor {
   font-size: 0.8rem;
   font-weight: 300;
   font-stretch: normal;
@@ -243,6 +249,11 @@ nav .left ul li {
   color: #fff;
 }
 
+.showBook {
+  display: flex;
+  flex-direction: column;
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -282,7 +293,8 @@ nav .left ul li {
   flex: 2;
 }
 
-.form-container .inputs .input-submit {
+.form-container .inputs .input-submit,
+.add-book-button {
   font-family: 'RobotoSlab', sans-serif;
   font-size: 0.8rem;
   font-weight: bold;
@@ -298,6 +310,17 @@ nav .left ul li {
   background-color: #0290ff;
   color: #fff;
   border: none;
+}
+
+.add-book-button {
+  letter-spacing: 0;
+  text-align: center;
+  width: 200px;
+  height: auto;
+  padding: 2em 1em;
+  border-radius: 3px;
+  border: none;
+  margin: auto;
 }
 
 .categories {

@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 import Book from './Book';
 
 function BookList(props) {
-  const { books } = props;
+  let { books } = props;
+  books.map((book) => {
+    books = book;
+    return book;
+  });
+
   return (
     <div className="bookList">
       {books.map((book) => (
