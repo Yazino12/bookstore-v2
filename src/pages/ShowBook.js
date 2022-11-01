@@ -5,7 +5,6 @@ const ShowBook = () => {
   const location = useLocation();
   const { state } = location;
   const {
-    id,
     title,
     author,
     image_url: imageURL,
@@ -21,13 +20,30 @@ const ShowBook = () => {
 
   return (
     <div className="showBook">
-      <h1>{id}</h1>
-      <h1>{title}</h1>
-      <h1>{author}</h1>
-      <img src={imageURL} alt="Book" width={200} height={250} />
-      <p>{description}</p>
-      <p>{category}</p>
-      <h1>{chapters}</h1>
+      <div className="showBook-header">
+        <div className="showBook-header-image">
+          <img src={imageURL} alt="Book" width={200} height={250} />
+        </div>
+        <div className="showBook-header-title">
+          <h1>{title}</h1>
+          <p>{author}</p>
+        </div>
+      </div>
+      <div className="showBook-body">
+        <div className="showBook-body-description">
+          <p>{description}</p>
+        </div>
+        <div className="showBook-body-details">
+          <p>
+            Category:
+            {category}
+          </p>
+          <p>
+            Chapters:
+            {chapters}
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

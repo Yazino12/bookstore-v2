@@ -349,3 +349,33 @@ nav .left ul li {
 .categories .checkStatus {
   width: 200px;
 }
+
+.showBook {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 40%;
+  margin: auto;
+  padding: 1em;
+  background-color: #fff;
+  border: solid 1px var(--grey-border);
+}
+
+.showBook-header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1em;
+  /* width: 80%;
+  margin: auto; */
+}
+
+.showBook-header-title {
+  display: flex;
+  flex-direction: column;
+  /* flex: 2; */
+}
+
+.showBook-body {
+}
