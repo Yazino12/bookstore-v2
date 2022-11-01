@@ -25,7 +25,7 @@ h2,
 h3,
 h4,
 p {
-  margin: auto;
+  margin: 0;
 }
 
 ul {
@@ -249,11 +249,6 @@ nav .left ul li {
   color: #fff;
 }
 
-.showBook {
-  display: flex;
-  flex-direction: column;
-}
-
 .form-container {
   display: flex;
   flex-direction: column;
@@ -367,15 +362,65 @@ nav .left ul li {
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 1em;
-  /* width: 80%;
-  margin: auto; */
+  border: 1px solid #ddd;
+  padding: 0.5em 0;
 }
 
 .showBook-header-title {
   display: flex;
   flex-direction: column;
-  /* flex: 2; */
+  align-items: center;
+}
+
+.showBook-header-title .title {
+  font-family: 'Montserrat', sans-serif;
+  color: #0290ff;
 }
 
 .showBook-body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border: 1px solid #ddd;
+  padding: 0.5em 0;
+}
+
+.showBook-body-description {
+  width: 80%;
+  margin: auto;
+}
+
+.showBook-body-description .description {
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.showBook-body-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 0;
+  width: 80%;
+  margin: auto;
+}
+
+.showBook-body-details .details {
+  display: inline-block;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  line-height: 1.2rem;
+  font-weight: 900;
+  background: #0290ff;
+  padding: 8px;
+  font-size: 15px;
+  border-radius: 4px;
+  color: #fff;
+  transition: all 75ms ease-in-out;
+}
+
+.showBook-body-details .details:hover {
+  background: #044c82;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
 }

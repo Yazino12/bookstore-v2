@@ -25,22 +25,28 @@ const ShowBook = () => {
           <img src={imageURL} alt="Book" width={200} height={250} />
         </div>
         <div className="showBook-header-title">
-          <h1>{title}</h1>
+          <h1 className="title">{title}</h1>
           <p>{author}</p>
         </div>
       </div>
       <div className="showBook-body">
         <div className="showBook-body-description">
-          <p>{description}</p>
+          <p className="description">{description}</p>
         </div>
         <div className="showBook-body-details">
-          <p>
+          <p className="details">
             Category:
-            {category}
+            <span>
+              {' '}
+              {category}
+            </span>
           </p>
-          <p>
+          <p className="details">
             Chapters:
-            {chapters}
+            <span>
+              {' '}
+              {chapters}
+            </span>
           </p>
         </div>
       </div>
