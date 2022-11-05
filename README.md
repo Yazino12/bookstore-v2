@@ -2,7 +2,7 @@
 
 # Bookstore
 
-> Bookstore is a simple web app which allows users to add, edit and remove books from their booklist. This app is built using React, Redux and Javascript libraries.
+> Bookstore is a simple web app which allows users to add, edit and remove books from their booklist. This app is built using React, Redux and Javascript libraries
 
 <h2 align="center">
   Demo 📝
